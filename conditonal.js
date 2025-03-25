@@ -81,22 +81,44 @@
 
 
 // Switch => Menu-driven
-let a = 100, b = 20, choice;
-choice = prompt("Enter your choice: ");
-switch(choice){
-    case "1":
-        console.log("addtion of a and b is: ", a + b);
-        break
-    case "2":
-        console.log("Substraction of a and b is: ", a - b);
-        break
-    case "3":
-        console.log("Multiplication of a and b is: ", a * b);
-        break
-    case "4":
-        console.log("Division of a and b is: ", a / b);
-        break
-    default:
-        console.log("Wrong Choice....");
-        break
-}
+// let a = 100, b = 20, choice;
+// choice = prompt("Enter your choice: ");
+// switch(choice){
+//     case "1":
+//         console.log("addtion of a and b is: ", a + b);
+//         break
+//     case "2":
+//         console.log("Substraction of a and b is: ", a - b);
+//         break
+//     case "3":
+//         console.log("Multiplication of a and b is: ", a * b);
+//         break
+//     case "4":
+//         console.log("Division of a and b is: ", a / b);
+//         break
+//     default:
+//         console.log("Wrong Choice....");
+//         break
+// }
+
+
+// Change password Logic
+
+let oldPass = "123", newPass = "1253", cPass = "1253";
+
+if(oldPass == newPass){
+    console.error("Old & New Password both are same !!!!")
+}else if(newPass == cPass){
+        console.log("Password is Changed Success 😎")
+    }else{
+        console.error("New Password & Confirm Password is not matched!!!!");
+    }
+
+
+/*
+
+git add .
+git commit -m "message"
+git push 
+
+*/
