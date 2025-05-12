@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <h2>Form Validation</h2>
+        <form onsubmit="return validationForm()">
+            <label>Firstname:</label>
+            <input type="text" id="fname" />
+            <span class="error" id="fnameErr"></span>
+            <br>
+            <br>
+            <label>Lastname:</label>
+            <input type="text" id="lname" placeholder="Enter Last Name" />
+            <span class="error" id="lnameErr"></span>
+            <br>
+            <br>
+            <label>Email:</label>
+            <input type="text" id="email" placeholder="Enter Email" />
+            <span class="error" id="emailErr"></span>
+            <br>
+            <br>
+            <label>Password:</label>
+            <input type="text" id="password" placeholder="Enter password" />
+            <span class="error" id="passErr"></span>
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="jQueryVal.js"></script>
+    <!-- <script src="index.js"></script> -->
+</body>
+</html>
