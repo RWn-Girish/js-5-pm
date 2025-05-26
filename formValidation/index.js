@@ -25,7 +25,7 @@ form.addEventListener('submit', (event) => {
 
     if(fname.value == ""){
         setError("fnameErr",  'Firstname is Require!');
-        fname.style.border = "1px solid blue"
+        fname.style.border = "1px solid red"
         fname.setAttribute('placeholder', 'Fname is required')
         a = false
     }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // callback function => one function as a agrument in another function
+      // Callback hell
+
+      // function Test(callback, m, n) {
+      //     console.log("Test Function Called...");
+      //     callback(m, n);
+      // }
+
+      // function abc(n){
+      //     n();
+      // }
+
+      // function n(){
+      //     console.log("N Function");
+      // }
+      // function Hello(){
+      //     console.log("Hello Function Called...");
+      // }
+
+      // Test(Hello)
+      // Test(()=> {
+      //     console.log("ABC Called")
+      // })
+
+      // Promises => pending, resolve, reject
+      // Promise Hell / chain
+      // let data = new Promise((resolve, reject)=> {
+      //     let a = false;
+      //     if(a == true){
+      //         resolve("promise resolve part");
+      //     }else{
+      //         reject("promise is rejected....");
+      //     }
+
+      // })
+
+      // console.log(data);
+
+      // data
+      // .then(res => console.log(res))
+      // .catch(err => console.log(err));
+
+      // async / await
+
+      async function Hello() {
+        let data = await new Promise((resolve, reject) => {
+          let a = false;
+          if (a == true) {
+            resolve("promise resolve part");
+          } else {
+            reject("promise is rejected....");
+          }
+        });
+        
+        console.log(data);
+        
+      }
+      Hello()
+    </script>
+  </body>
+</html>

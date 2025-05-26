@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div align="center">
+        <input type="text" id="title" placeholder="Enter Movie Title" />
+        <button>Search</button>
+    </div>
+    <div align="center" id="movieDetail"></div>
+    <script>
+        let title = document.querySelector("#title");
+        // document.querySelector('button').addEventListener('click', ()=> {
+        //     let movieTitle = title.value;
+
+        //     fetch(`https://www.omdbapi.com/?t=${movieTitle}&apikey=49e6c128`)
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         let result = `
+        //         <div class="card" style="width: 18rem;">
+        //         <img src=${data.Poster} class="card-img-top" alt=${data.Title}>
+        //         <div class="card-body">
+        //             <h5 class="card-title">${data.Title}</h5>
+        //             <p class="card-text">${data.Plot}</p>
+        //             <a href="#" class="btn btn-primary">Go somewhere</a>
+        //         </div>
+        //         </div>
+        //         `
+        //         document.querySelector("#movieDetail").innerHTML = result
+        //     })
+        //     .catch(err => console.log(err));
+        // })
+       
+        document.querySelector('button').addEventListener('click', async()=> {
+            let movieTitle = title.value;
+
+            let res = await fetch(`https://www.omdbapi.com/?t=${movieTitle}&apikey=49e6c128`)
+            let data = await res.json();
+                let result = `
+                <div class="card" style="width: 18rem;">
+                <img src=${data.Poster} class="card-img-top" alt=${data.Title}>
+                <div class="card-body">
+                    <h5 class="card-title">${data.Title}</h5>
+                    <p class="card-text">${data.Plot}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                </div>
+                `
+                document.querySelector("#movieDetail").innerHTML = result
+            
+        })
+    </script>
+</body>
+</html>
